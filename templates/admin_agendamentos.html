@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Agendamentos - Admin</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h2>Agendamentos</h2>
+            <p>
+                <a href="{{ url_for('admin_logout') }}" class="btn btn-logout">Sair</a>
+            </p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Data</th>
+                        <th>Hora</th>
+                        <th>Nome</th>
+                        <th>Telefone</th>
+                        <th>Serviço</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for ag in agendamentos %}
+                    <tr>
+                        <td>{{ ag['data'] }}</td>
+                        <td>{{ ag['hora'] }}</td>
+                        <td>{{ ag['nome'] }}</td>
+                        <td>{{ ag['telefone'] }}</td>
+                        <td>{{ ag['servico'] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

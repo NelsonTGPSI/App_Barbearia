@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Agendamento - Barbearia</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h2>Agende seu horário</h2>
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    {% for category, message in messages %}
+                        <div class="alert alert-{{ category }}">{{ message }}</div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+            <form method="post">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+                <label for="telefone">Telefone:</label>
+                <input type="text" id="telefone" name="telefone" required>
+                <label for="data">Data:</label>
+                <input type="date" id="data" name="data" required>
+                <label for="hora">Hora:</label>
+                <input type="time" id="hora" name="hora" min="09:00" max="19:00" required>
+                <label for="servico">Serviço:</label>
+                <input type="text" id="servico" name="servico" required>
+                <button type="submit">Agendar</button>
+            </form>
+            <p style="margin-top:20px;">
+                <a href="{{ url_for('admin_login') }}" class="btn btn-admin">Área do Administrador</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
