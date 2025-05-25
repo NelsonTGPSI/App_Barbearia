@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro - Barbearia</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Cadastro</h2>
+        <form method="post">
+            <label>Nome:</label>
+            <input type="text" name="nome" required>
+            <label>Email:</label>
+            <input type="email" name="email" required>
+            <label>Senha:</label>
+            <input type="password" name="senha" required>
+            <button type="submit">Cadastrar</button>
+        </form>
+        <p>Já tem conta? <a href="{{ url_for('login') }}">Entrar</a></p>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }}">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 500px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.card {
+    padding: 10px;
+}
+
+h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+input, select, button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button, .btn {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 4px;
+    padding: 10px 18px;
+    transition: background 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+button:hover, .btn:hover {
+    background: #0056b3;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.btn-admin {
+    background: #28a745;
+}
+
+.btn-admin:hover {
+    background: #1e7e34;
+}
+
+.btn-logout {
+    background: #dc3545;
+}
+
+.btn-logout:hover {
+    background: #a71d2a;
+}
+
+.alert-success { color: green; }
+.alert-danger { color: red; }
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background: #fafafa;
+}
+th, td {
+    border: 1px solid #ccc;
+    padding: 6px;
+    text-align: center;
+}
+th {
+    background: #f0f0f0;
+    color: #333;
+}
